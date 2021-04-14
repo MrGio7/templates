@@ -1,15 +1,33 @@
 .home{
-    width: 20%;
-    position: relative;
 
-    img{
-        width: 100%;
+    .jsLogo, .cssLogo{
+        width: 200px;
+        height: 228px;
         cursor: pointer;
         position: absolute;
+        top:calc(50vh - 114px);
 
 
         &:hover{
-            width: 120%;
+            width: 250px;
+            height: 280px;
+            top:calc(50vh - 114px - 26px);
+        }
+    }
+
+    .jsLogo{
+        left: calc(50vw - 250px);
+
+        &:hover{
+            left: calc(50vw - 275px);
+        }
+    }
+    
+    .cssLogo{
+        left: calc(50vw + 50px);
+
+        &:hover{
+            left: calc(50vw + 25px);
         }
     }
 }
