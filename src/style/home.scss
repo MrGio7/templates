@@ -1,0 +1,15 @@
+.home{
+    width: 20%;
+    position: relative;
+
+    img{
+        width: 100%;
+        cursor: pointer;
+        position: absolute;
+
+
+        &:hover{
+            width: 120%;
+        }
+    }
+}
