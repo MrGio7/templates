@@ -2,11 +2,12 @@ import { Route } from "react-router";
 import Prism from "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 import { useEffect } from "react";
+import AccordionTemplate from "./templates/accordion";
 
 function CssTemplateRight() {
     useEffect(() => {
         Prism.highlightAll()
-    }, [])
+    })
 
     const Accordion = <div className="container">
         <h1>Accordion</h1>
@@ -17,50 +18,12 @@ function CssTemplateRight() {
         <div className="example">
         <pre>
             <code className="language-css">
-                {`.cssTemplate{
-    width: 100%;
-    height: 100vh;
-    background-color: $black;
-    display: flex;
-    flex-direction: row;
-
-    .leftContainer{
-        width: max-content;
-        height: 100vh;
-        overflow: hidden;
-        padding: 2vh 0;
-        border-right: 0.5rem solid $purple3;
-        display: flex;
-        align-items: center;
-
-        ul{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-
-            li, a{
-                text-decoration: none;
-                font-size: 1.8vw;
-                padding: 1vh 2vw 1vh 1vw;
-                cursor: pointer;
-                color:white;
-            }
-        }
-    }
-
-    .rightContainer{
-        display: flex;
-        flex-direction: column;
-
-        .container{
-            .example{
-                .code{
-                    white-space:pre-wrap;
-                }
-            }
-        }
-    }
-}`}
+                {AccordionTemplate.css}
+            </code>
+        </pre>
+        <pre>
+            <code className="language-html">
+                {AccordionTemplate.html}
             </code>
         </pre>
         </div>
