@@ -1,13 +1,14 @@
-import { Route } from "react-router";
+import { Route, useRouteMatch } from "react-router";
 import Prism from "prismjs";
-import "prismjs/themes/prism-okaidia.css";
 import { useEffect } from "react";
 import AccordionTemplate from "./templates/accordion";
 
 function CssTemplateRight() {
     useEffect(() => {
         Prism.highlightAll()
-    })
+    }, []);
+
+    let match = useRouteMatch();
 
     const Accordion = <div className="container">
         <h1>Accordion</h1>
@@ -30,7 +31,7 @@ function CssTemplateRight() {
     </div>
 
     return <div className="rightContainer">
-        <Route exact path="/cssTemplate/accordion">
+        <Route exact path={`${match.path}/accordion`}>
             {Accordion}
         </Route>
     </div>

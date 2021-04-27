@@ -1,4 +1,4 @@
-import loadable from '@loadable/component'
+import loadable from '@loadable/component';
 import { Route, Switch } from 'react-router';
 
 // Components
@@ -16,10 +16,9 @@ function App() {
           <Background />
           <Home />
         </Route>
-        <Route
-          path="/cssTemplate"
-          render={props => <CssTemplate {...props} />}
-        />
+        <Route path="/cssTemplate" >
+          <CssTemplate/>
+        </Route>
       </Switch>
     </div>
   );

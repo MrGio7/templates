@@ -1,10 +1,21 @@
-import CssTemplateLeft from "./cssTemplateLeft";
-import CssTemplateRight from "./cssTemplateRight";
+import { Route, Switch, useRouteMatch } from "react-router";
+import loadable from '@loadable/component';
+
+// Components
+import Loader from "./loader";
+const Accordion = loadable(() => import("./templates/accordion"), {fallback: <Loader/>});
+const CssTemplateLeft = loadable(() => import("./cssTemplateLeft"), {fallback: <Loader/>});
 
 function CssTemplate() {
+    let match = useRouteMatch();
+
     return <div className="cssTemplate">
         <CssTemplateLeft/>
-        <CssTemplateRight/>
+        <Switch>
+            <Route path={`${match.path}/accordion`}>
+                <Accordion/>
+            </Route>
+        </Switch>
     </div>
 }
 
