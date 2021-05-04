@@ -16,9 +16,9 @@ function App() {
           <Background />
           <Home />
         </Route>
-        <Route path="/cssTemplate" >
-          <CssTemplate/>
-        </Route>
+        <Route path="/cssTemplate"
+          render={props => <CssTemplate {...props} loadable={loadable} Loader={Loader} />}
+        />
       </Switch>
     </div>
   );

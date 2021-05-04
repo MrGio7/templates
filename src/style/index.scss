@@ -70,13 +70,7 @@ table {
 	}
 }
 
-$purple0: #0c0032;
-$purple1: #190061;
-$purple2: #240090;
-$purple3: #3500d3;
-$black: #1a1a1a;
-
-@import "./style/home.scss";
-@import "./style/loader.scss";
-@import "./style/prism-okaidia.scss";
-@import "./style/cssTemplate.scss";
+@import "./components/home";
+@import "./components/cssTemplate";
+@import "./components/prism-okaidia";
+@import "./components/cssTemplate";
