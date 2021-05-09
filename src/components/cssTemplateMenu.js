@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 
-function CssTemplateLeft() {
+function CssTemplateMenu() {
     return <div className="leftContainer">
         <ul>
             <Link to="/">Home</Link>
             <Link to="/cssTemplate/accordion">Accordion</Link>
-            <li>Alerts</li>
-            <li>Breadcrumb</li>
+            <Link to="/cssTemplate/breadcrumb">Breadcrumb</Link>
             <li>Burger</li>
             <li>Buttons</li>
             <li>Collapse</li>
@@ -21,4 +20,4 @@ function CssTemplateLeft() {
     </div>
 }
 
-export default CssTemplateLeft;
+export default CssTemplateMenu;
