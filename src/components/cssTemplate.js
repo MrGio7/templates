@@ -1,11 +1,9 @@
 import { Route, Switch } from "react-router";
 
-
-
-
 function CssTemplate(props) {
     const Accordion = props.loadable(() => import("./templates/accordion"), {fallback: <props.Loader/>});
     const BreadCrumb = props.loadable(() => import("./templates/breadcrumb"), {fallback: <props.Loader/>});
+    const Burger = props.loadable(() => import("./templates/burger"), {fallback: <props.Loader/>});
     const CssTemplateMenu = props.loadable(() => import("./cssTemplateMenu"), {fallback: <props.Loader/>});
 
     return <div className="cssTemplate">
@@ -16,6 +14,9 @@ function CssTemplate(props) {
             </Route>
             <Route exact path={`/cssTemplate/breadcrumb`}>
                 <BreadCrumb/>
+            </Route>
+            <Route exact path={`/cssTemplate/burger`}>
+                <Burger/>
             </Route>
         </Switch>
     </div>
