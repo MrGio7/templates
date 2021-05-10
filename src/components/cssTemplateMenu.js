@@ -7,7 +7,7 @@ function CssTemplateMenu() {
             <Link to="/cssTemplate/accordion">Accordion</Link>
             <Link to="/cssTemplate/breadcrumb">Breadcrumb</Link>
             <Link to="/cssTemplate/burger">Burger</Link>
-            <li>Buttons</li>
+            <Link to="/cssTemplate/buttons">Buttons</Link>
             <li>Collapse</li>
             <li>Dropdown</li>
             <li>NavBar</li>
