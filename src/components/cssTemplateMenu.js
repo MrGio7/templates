@@ -8,6 +8,7 @@ function CssTemplateMenu() {
             <Link to="/cssTemplate/breadcrumb">Breadcrumb</Link>
             <Link to="/cssTemplate/burger">Burger</Link>
             <Link to="/cssTemplate/buttons">Buttons</Link>
+            <Link to="/cssTemplate/carousel">Carousel</Link>
             <li>Collapse</li>
             <li>Dropdown</li>
             <li>NavBar</li>
