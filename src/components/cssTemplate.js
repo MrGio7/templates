@@ -6,6 +6,7 @@ function CssTemplate(props) {
     const Burger = props.loadable(() => import("./templates/burger"), {fallback: <props.Loader/>});
     const Buttons = props.loadable(() => import("./templates/buttons"), {fallback: <props.Loader/>});
     const Carousel = props.loadable(() => import("./templates/carousel"), {fallback: <props.Loader/>});
+    const Dropdown = props.loadable(() => import("./templates/dropdown"), {fallback: <props.Loader/>});
     const CssTemplateMenu = props.loadable(() => import("./cssTemplateMenu"), {fallback: <props.Loader/>});
 
     return <div className="cssTemplate">
@@ -25,6 +26,9 @@ function CssTemplate(props) {
             </Route>
             <Route exact path={`/cssTemplate/carousel`}>
                 <Carousel/>
+            </Route>
+            <Route exact path={`/cssTemplate/dropdown`}>
+                <Dropdown/>
             </Route>
         </Switch>
     </div>
