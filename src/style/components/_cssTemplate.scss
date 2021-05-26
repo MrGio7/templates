@@ -37,7 +37,7 @@ code {
     
 }
 
-.accordionTemplate, .breadcrumbTemplate, .burgerTemplate, .buttonsTemplate, .carouselTemplate {
+.accordionTemplate, .breadcrumbTemplate, .burgerTemplate, .buttonsTemplate, .carouselTemplate, .dropdownTemplate {
     width: 87%;
     overflow-x: hidden;
 
@@ -305,6 +305,35 @@ code {
 
         #slide4{
             background-color: #6cbeed;
+        }
+    }
+
+    .dropdownExample{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button{
+            color:white;
+            background-color: $purple3;
+            width: 8rem;
+
+            &:hover{
+                + ul {
+                    display: block;
+                }
+            }
+        }
+
+        ul{
+            display: none;
+            margin: 0px;
+            z-index: 1000;
+            width: 8rem;
+
+            li{
+                margin: .5re;
+            }
         }
     }
 }
