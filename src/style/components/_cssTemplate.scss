@@ -310,8 +310,9 @@ code {
 
     .dropdownExample{
         display: flex;
-        flex-direction: column;
+        position:relative;
         align-items: center;
+        justify-content: center;
 
         button{
             color:white;
@@ -321,6 +322,9 @@ code {
             &:hover{
                 + ul {
                     display: block;
+                    position: absolute;
+                    top:1.3rem;
+                    background-color: black;
                 }
             }
         }
@@ -332,7 +336,7 @@ code {
             width: 8rem;
 
             li{
-                margin: .5re;
+                margin: .5rem;
             }
         }
     }
